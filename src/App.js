@@ -12,7 +12,8 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" component={RandomImg} />
-        <Route  path="/search/:query" component={SearchPage} />
+        <Route path="/search/" component={SearchPage} />
+        <Route path="/search/:query" component={SearchPage} />
         <Route path="/:imageid" component={ImageInfo} />
       </Switch>
     </div>

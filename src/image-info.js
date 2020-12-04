@@ -36,10 +36,6 @@ function ImageInfo(props){
         style = {backgroundColor: "blue"};
     }
 
-    // function GoBack(){
-    //     props.history.goBack()
-    // }
-
     if (description!==null) {
         if (description.includes('<a')){
             var describe = description.substr(0, description.indexOf('<a'))
@@ -69,8 +65,6 @@ function ImageInfo(props){
                 </div>
             </div>
             : null}
-
-
         </div>
         
     )

@@ -34,7 +34,6 @@ function RandomImg(){
     const fetchData = async () => {
       const result = await fetch(`https://api.nasa.gov/planetary/apod?date=${date}&hd=True&api_key=VFhPnUcWVCwhPloguYc3zsrYpH9dVJhgPdcEuz1A`)
         .then(result => result.json())
-        // .then(data => console.log(data.media_type));
         .then(data => {
             if(data.media_type !== "video"){
               setImage(data.url)
@@ -50,13 +49,17 @@ function RandomImg(){
 
   let style;
   (hd===false) ? style={backgroundImage: `url(${image})`}:style={backgroundImage: `url(${hdImage})` };
-  // to="/search/query"
+ 
   return (
     <div className="random-img" style={style}>
       <div className="custom-control custom-switch hd-switch">
-        <Link  to={{ pathname: "/search/query", state: 'supernova'}}>
+        {/* <Link to={{ pathname: "/search", state: 'supernova'}}>
+          <button type="button" className="home-btn btn btn-dark btn-sm ">Search Image</button> 
+        </Link> */}
+        <Link to="/search?query=supernova" >
           <button type="button" className="home-btn btn btn-dark btn-sm ">Search Image</button> 
         </Link>
+        
         <input onClick={() => handleChange()} type="checkbox" class="custom-control-input" id="customSwitch1" />
         <label class="custom-control-label" for="customSwitch1">Toggle HD</label>
       </div>
