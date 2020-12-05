@@ -7,4 +7,5 @@ The application has two major features. First is the random image generator that
 The second feature allows the user explore the NASA image library. The client will return a grid of cards with the images that match the search query. These cards are clickable and allow the user to learn more about the image.
 
 Technologies: React, React Router, Fetch, CSS (Grid), HTML
+
 Link: https://pantojao.github.io/nasa-app/
